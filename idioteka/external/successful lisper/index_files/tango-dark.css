@@ -1,0 +1,45 @@
+html,body{background-color:#2e3436}
+body{color:#babdb6}
+a{color:#729fcf}
+#loginGreating a{color:#729fcf!important}
+#hd h1{color:#fff}
+#hd .menu a{color:#e9b96e}
+#bd h2 *{color:#babdb6}
+#bd .tags a{color:#fcaf3e}
+#bd .tags a:visited{color:#fcaf3e}
+#bd header a:visited{color:#729fcf}
+#bd header h1 a{color:#babdb6}
+#bd header h1 a:visited{color:#babdb6}
+#bd a.tag{color:#fcaf3e}
+#bd a.tag:visited{color:#fcaf3e}
+#bd .sign a{color:#8ae234}
+#bd .sign a:visited{color:#8ae234}
+.boxlet{background-color:#272c2d}
+#bd .forum table thead{background-color:#555753}
+#bd .forum table thead a{color:#babdb6}
+#bd .forum table tbody td{border-color:#555753}
+#bd .forum table th{border-color:#555753}
+#bd .forum table tbody td a{color:#eeeeec}
+.messages .msg{background:#272c2d}
+#bd a:visited{color:#babdb6}
+#bd .forum table tbody td a:visited{color:#babdb6}
+#sitetitle{color:white}
+#navPath a:visited{color:#729fcf}
+#whois_userpic{background:#272c2d}
+.infoblock{background-color:#272c2d}
+#bd a.navLink:visited{color:#729fcf}
+#bd .nav a:visited{color:#729fcf}
+fieldset{border:1px solid white;padding:5px}
+fieldset legend{padding-left:5px;padding-right:5px;color:#babdb6}
+#bd .forum table tbody tr:hover{background-color:#5c3566}
+.nav li a:hover{box-shadow:0 0 1px 1px #729fcf}
+.page-number{background-color:#272c2d}
+.nav li a{border-color:#d4d4d4;background-color:#555753;color:#babdb6}
+.nav li a.current{background-color:#babdb6;color:black!important}
+#bd .nav li a:visited{color:#babdb6}
+.message-table a.secondary{color:#babdb6!important}
+.message-table .tag{background-color:#555753}
+.msg h1 a{color:#babdb6}
+.fav-buttons .selected [class^="icon-"]{color:#c17d11}
+.fav-buttons a{color:#babdb6}
+.user-remark{color:#aaa}

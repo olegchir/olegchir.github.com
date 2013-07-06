@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSoraN7vELC11_xip9Rz-hMs.woff) format('woff');
+}
