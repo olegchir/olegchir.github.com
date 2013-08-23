@@ -61,6 +61,28 @@ i.unbind("click",a);
 i.bind("click",{watch:j,id:h},f)
 }}$().ready(function(){b(c,g)
 })
+}function tag_memories_form_setup(a,b){$script.ready("plugins",function(){$(function(){$("#tagFavNoth").click(function(c){c.preventDefault();
+c.stopPropagation();
+$("#tagFavNoth").popover("show")
+});
+$("#tagFavNoth").popover({content:"Для добавления в избранное надо залогиниться!"})
+})
+});
+$(function(){function c(e){e.preventDefault();
+var f={tagName:a};
+var d=$("#tagFavAdd");
+var g=!d.hasClass("selected");
+if(g){f.add="add"
+}else{f.del="del"
+}f.csrf=b;
+$.ajax({url:"/user-filter/favorite-tag",type:"POST",dataType:"json",data:f}).done(function(h){if(h.error){alert(h.error)
+}else{d.attr("title",g?"Удалить из избранного":"В избранное");
+$("#favsCount").text(h.count);
+if(g){d.addClass("selected")
+}else{d.removeClass("selected")
+}}})
+}$("#tagFavAdd").bind("click",c)
+})
 }$(document).ready(function(){function c(){var g={type:"post",dataType:"json",xhrFields:{withCredentials:true},success:function(i,h){if(i.loggedIn){window.location.reload()
 }else{alert("Ошибка авторизации. Неправильное имя пользователя, e-mail или пароль.");
 window.location="/login.jsp"
