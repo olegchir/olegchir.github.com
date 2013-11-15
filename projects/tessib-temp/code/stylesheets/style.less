@@ -1,0 +1,294 @@
+@import "../javascripts/bootstrap/less/bootstrap";
+@import "./gradients";
+
+html {
+  height: 100%;
+}
+
+body{
+  background: #282828;
+  height:100%;
+}
+
+.fixed_background {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+#container {
+  min-height:100%;
+  height: 100%;
+  position:relative;
+}
+
+#header_spacer {
+  .make-row();
+  height: 12px;
+  .gradient_navy;
+}
+
+#footer_spacer {
+  .make-row();
+  min-height: 28px;
+  .gradient_navy;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+#footer_spacer_area {
+  .make-md-column(12);
+  height: 28px;
+  text-align: center;
+}
+
+#footer_spacer_text {
+  color:#c6ebf2;
+}
+
+#push {
+   height: 28px;
+}
+
+#push_top {
+  height: 12px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin-bottom: -28px;
+}
+
+#mainarea {
+  .make-row();
+  .fixed_background;
+  .gradient_red;
+  overflow: hidden;
+
+  #wrap;
+}
+
+#header {
+  padding-top:10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+#logo_img_wrapper {
+  .make-md-column(2);
+  .pull-left();
+}
+
+/* This parent can be any width and height */
+.center_block_haystack {
+  height:68px;
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.center_block_haystack:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can
+   also be of any width and height */
+.center_block_needle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#header_phone {
+//  .make-md-column-offset(7);
+  .pull-right();
+  .make-md-column(3);
+  text-align: right;
+  height:68px;
+  overflow: visible;
+}
+
+#header_phone_number {
+  color:#f5f5f5;
+  font-size: 18px;
+  margin-left:10px;
+  font-weight: bolder;
+}
+
+#top_sections {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+#section_left {
+  .make-md-column(8);
+}
+
+#section_right {
+  .make-md-column(4);
+//  padding-left: 0;
+}
+
+.section_row {
+  .make-row();
+}
+
+.section_caption {
+  .make-md-column(12);
+  color:#f5f5f5;
+  font-size: 24px;
+}
+
+#main_text_area {
+  .make-md-column(12);
+  padding-bottom: 10px;
+}
+
+#main_text_area_background {
+  .fixed_background;
+  .gradient_smokepaper;
+  overflow: visible;
+  padding-top:15px;
+  padding-left:20px;
+  padding-bottom:5px;
+  padding-right:20px;
+}
+
+#price_area {
+  .make-md-column(12);
+  padding-bottom: 10px;
+}
+
+#price_area_background {
+  .fixed_background;
+  .gradient_smokepaper;
+  overflow: visible;
+  text-align: center;
+  height: 90px;
+}
+
+#price_text {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#options_area {
+  .make-md-column(12);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#options_area_needle {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.options_area_item {
+   .fixed_background;
+   .gradient_smokepaper;
+   text-align: center;
+   height: 85px;
+   width: 32%;
+   position:relative;
+   float: left;
+ }
+
+#options_area_item_1 {
+  .options_area_item;
+  margin-right: 2%;
+}
+#options_area_item_2 {
+  .options_area_item;
+  margin-right: 2%;
+}
+#options_area_item_3 {
+  .options_area_item;
+}
+
+#middle_sections {
+  .make-md-column(12);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.middle_section_item {
+  .make-md-column(4);
+  margin-bottom:10px;
+  overflow: hidden;
+}
+
+.middle_section_item_upper_page {
+  .fixed_background;
+  .gradient_navy_benefit;
+  text-align: center;
+  padding-bottom: 10px;
+  overflow: hidden;
+  height: 182px;
+  position: relative;
+}
+
+.middle_section_item_upper_page_content
+{
+  position: absolute;
+  bottom: 10px;
+  width:100%;
+  text-align: center;
+}
+
+.middle_section_item_upper_page_content_image {
+  padding-bottom: 32px;
+}
+
+#lower_sections {
+  .make-md-column(12);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.lower_section_item {
+  .make-md-column(4);
+  margin-bottom:10px;
+  overflow: hidden;
+}
+
+#lower_phone_icon, #lower_email_icon {
+  width:59px;
+  height: 59px;
+  position: relative;
+  float: left;
+}
+
+#lower_phone_background, #lower_email_background {
+  .fixed_background;
+  .gradient_smokepaper;
+  overflow: visible;
+  text-align: left;
+  height: 59px;
+}
+
+#lower_phone_background_area, #lower_email_background_area {
+  height: 59px;
+  position: relative;
+  text-align: center;
+}
+
+#lower_phone_number, #lower_email_text {
+  color:#000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#lower_phone_number {
+  color:#000000;
+}
+
+#lower_email_text {
+  color:#9a2239;
+}
