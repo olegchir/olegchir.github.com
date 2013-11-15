@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /projects/tessib-temp/code
+Disallow: /projects/impulse-temp/code
+
