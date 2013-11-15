@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en-us">
+
+    <title>Home Page Crowd Funding Website</title>
+    <!--<base href="#/">--><base href=".">
+    <meta name="keywords" content="">
+    <meta name="description" content="Crowd Funding Platform">
+    <meta name="copyright" content="">
+
+
+    <!--<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<script type="text/javascript" src="js/css3-mediaqueries.js"></script>-->
+
+    <link type="text/css" href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/prettyLoader.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/jquery.pnotify.default.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/tipsy.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/basic.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/galleriffic-2.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/style.old.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.pnotify.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquerydefaultvalue.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+    <!-- All Bootstrap 3 files in a one block of code -->
+    <link type="text/css" href="css/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/bootstrap-3.0.2/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/bootstrap-table-responsive.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="css/bootstrap-3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- Centralized user css and js -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+<div class="navbar center brand_menu">
+    <div class="navbar-inner">
+        <div class="container center">
+            <a class="navbar-brand" href="#/">
+                <img src="css/images/logo.png" border="0".>
+            </a>
+            <div class="nav navbar-nav navbar-right login_line">
+                <div>
+                    <div>
+                        <img style="margin-right: 20px;" src="css/images/default_avatar.png" border="0">
+                        User logged in, info goes here.
+                        <a href="#">
+                            <font color="red"><b>LogOut</b></font>
+                        </a>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar navbar-default center" role="navigation">
+    <div class="navbar-inner">
+        <div class="container center">
+            <!--brand and menu-->
+            <ul class="nav navbar-nav">
+                <li class="main_menu_item"><a href="./css/images/index.html">Home</a></li>
+                <li class="main_menu_item"><a href="./css/images/index.html">Search</a></li>
+                <li class="main_menu_item"><a href="./css/images/index.html">Browse</a></li>
+                <li class="main_menu_item"><a href="#/user/create-transaction">Create&nbsp;Deal</a></li>
+                <li class="main_menu_item"><a href="./css/images/index.html">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div id="wrap">
+<div id="main" class="container">
+
+<div class="row">
+        <div class="col-md-12">
+            <div class="container search_selection_table_header">
+                <div class="col-md-5 orange_table_header_row">
+                    <span class="orange_table_header">Search&nbsp;Section (disabled)</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <table class="table-curved search_selection_table" border="0" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="greyBackground">
+            <form method="post" action="#/user/search">
+                <div class="row">
+                <div class="col-md-4 pull-left">
+                    <table class="search_selection_table_col greyBackground" border="0" border="0" cellpadding="5" cellspacing="5">
+                        <tr>
+                            <td>
+                                <input type="text" name="keyword" disabled="" class="formDefaultValue">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="styled-select">
+                                    <select name="transactionType" disabled="">
+                                        <option value="">Transaction Type</option>
+                                        <option value="type1">Transaction Type1</option>
+                                        <option value="type2">Transaction Type2</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="styled-select">
+                                    <select name="capitalType" disabled="">
+                                        <option value="">Capital Type</option>
+                                        <option value="type1">Capital Type1</option>
+                                        <option value="type2">Capital Type2</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </div>
+                <div class="col-md-4 pull-left">
+                <table class="search_selection_table_col greyBackground" border="0" border="0" cellpadding="5" cellspacing="5">
+                    <tr>
+                        <td>
+                            <div class="styled-select">
+                                <select name="geography" disabled="">
+                                    <option value="">Geography</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="UK">UK</option>
+                                    <option value="France">France</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <div class="styled-select">
+                                    <select name="industry" disabled="">
+                                        <option value="">Industry</option>
+                                        <option value="industry1">Industry1</option>
+                                        <option value="industry2">Industry2</option>
+                                    </select>
+                                </div>
+                            </td>
+                     </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" name="location" disabled="" class="formDefaultValue">
+                        </td>
+                    </tr>
+
+                </table>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <table class="search_selection_table_col greyBackground" style="margin-bottom:0px;" border="0" border="0" cellpadding="5" cellspacing="5">
+                        <tr>
+                            <td>
+                                <input name="sizeoffinancing" type="text" disabled="" class="formDefaultValue">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="corevenue" type="text" disabled="" class="formDefaultValue">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="coebitda" disabled="" class="formDefaultValue">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="submit" class="submitBtn" value="Submit" disabled="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            </form>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+</div>
+
+<div id="content" class="row transaction_table_main_row">
+    <div class="col-md-12 transaction_grid_table_header">
+        <div class="container">
+            <div class="col-md-2 orange_table_header_row">
+                <span class="orange_table_header">Your&nbsp;transactions</span>
+            </div>
+            <!-- Pages -->
+            <div class="col-md-10 pull-right upper_pages_row">
+                <ul class="pages upper_pages" data-bind="foreach: pages">
+                    <li data-bind="text: $data,
+               css: { selected: $data == $root.chosenPageId() },
+               click: $root.goToPage"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <!-- Data grid -->
+        <table class="trxs table-collapse transaction_grid_table" data-bind="with: chosenPageData" cellspacing="0" cellpadding="0">
+            <thead class="greyBackground">
+            <tr class="title">
+                <th>Company Logo</th><th>Company Name</th><th>Summary Description</th><th>Description of Opportunity</th></tr></th>
+            </tr>
+            </thead>
+            <tbody data-bind="foreach: trxs">
+            <tr data-bind="click: $root.goToTrx">
+                <td><img width="50px;" height="50px;" data-bind="attr: {src: logoSrc}" /></td>
+                <td data-bind="text: companyName"></td>
+                <td data-bind="text: summaryDesc"></td>
+                <td data-bind="text: opportunityDesc"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-12 upper_pages_row">
+        <ul class="pages upper_pages bottom_pages" data-bind="foreach: pages">
+            <li data-bind="text: $data,
+       css: { selected: $data == $root.chosenPageId() },
+       click: $root.goToPage"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row live_deal_main_row">
+    <div class="col-md-12 live_deal_table_header_row">
+        <div class="container">
+            <div class="col-md-2 orange_table_header_row">
+                <span class="orange_table_header">Live&nbsp;Deal</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 default-font live_deal_table_row">
+        <table class="table-collapse live_deal_table" cellspacing="5" cellpadding="5">
+            <tr>
+                <td><img src="css/images/companyLogo.png"></td>
+                <td>By: <a href="#">Iris Palmares</a></td>
+                <td>05.04.2013</td>
+                <td>SomeCompany Ltd</td>
+                <td>By doing action X</td>
+                <td>Type of deal</td>
+                <td>Deal size</td>
+                <td>Revenue</td>
+                <td>EBITDA</td>
+            </tr>
+            <tr>
+                <td><img src="css/images/companyLogo1.png"></td>
+                <td>By: <a href="#">Iris Palmares</a></td>
+                <td>05.04.2013</td>
+                <td>SomeCompany Ltd</td>
+                <td>By doing action X</td>
+                <td>Type of deal</td>
+                <td>Deal size</td>
+                <td>Revenue</td>
+                <td>EBITDA</td>
+            </tr>
+            <tr>
+                <td><img src="css/images/companyLogo2.png"></td>
+                <td>By: <a href="#">Iris Palmares</a></td>
+                <td>05.04.2013</td>
+                <td>SomeCompany Ltd</td>
+                <td>By doing action X</td>
+                <td>Type of deal</td>
+                <td>Deal size</td>
+                <td>Revenue</td>
+                <td>EBITDA</td>
+            </tr>
+            <tr>
+                <td><img src="css/images/companyLogo3.png"></td>
+                <td>By: <a href="#">Iris Palmares</a></td>
+                <td>05.04.2013</td>
+                <td>SomeCompany Ltd</td>
+                <td>By doing action X</td>
+                <td>Type of deal</td>
+                <td>Deal size</td>
+                <td>Revenue</td>
+                <td>EBITDA</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="dialogTrx" class="ui-helper-hidden" title="View Transaction Details">
+<div class="row">
+
+<div class="col-md-6">
+<table class="info table table-responsive table-collapse table-without-lines  table-first-row-align-left table-second-row-align-right table-first-row-is-title" data-bind="with: chosenTrxData">
+    <tr>
+        <th class="table-without-lines-header-row" colspan="2"><span class="orange_table_header">Transaction</span></th>
+    </tr>
+    <tr>
+        <td class="name" style="padding-bottom: 6px;"><img width="50px" data-bind="visible: logoSrc, attr: {src: logoSrc}" /></td>
+        <td class="value" style="padding-bottom: 6px;"></td>
+    </tr>
+    <tr>
+        <td class="name">Company Name</td>
+        <td class="value" data-bind="text: companyName"></td>
+    </tr>
+    <tr data-bind="visible: keywords">
+        <td class="name">Keywords</td>
+        <td class="value" data-bind="text: keywords"></td>
+    </tr>
+    <tr data-bind="visible: geography">
+        <td class="name">Geography</td>
+        <td class="value" data-bind="text: geography"></td>
+    </tr>
+    <tr data-bind="visible: sizeOfFinancing">
+        <td class="name">Sife of Financing</td>
+        <td class="value" data-bind="numericWithComas: sizeOfFinancing"></td>
+    </tr>
+    <tr data-bind="visible: transactionType">
+        <td class="name">Transaction Type</td>
+        <td class="value" data-bind="text: transactionType"></td>
+    </tr>
+    <tr data-bind="visible: industry">
+        <td class="name">Industry</td>
+        <td class="value" data-bind="text: industry"></td>
+    </tr>
+    <tr data-bind="visible: corevenue">
+        <td class="name">Co. Revenue</td>
+        <td class="value" data-bind="numericWithComas: corevenue"></td>
+    </tr>
+    <tr data-bind="visible: capitalType">
+        <td class="name">Capital Type</td>
+        <td class="value" data-bind="text: capitalType"></td>
+    </tr>
+    <tr data-bind="visible: location">
+        <td class="name">Location</td>
+        <td class="value" data-bind="text: location"></td>
+    </tr>
+    <tr data-bind="visible: coebitda">
+        <td class="name">Co. EBITDA</td>
+        <td class="value" data-bind="numericWithComas: coebitda"></td>
+    </tr>
+    <tr data-bind="visible: summaryDesc">
+        <td class="name">Summary Description</td>
+        <td class="value" data-bind="text: summaryDesc"></td>
+    </tr>
+    <tr data-bind="visible: companyDesc">
+        <td class="name" >Description of Company</td>
+        <td class="value" data-bind="text: companyDesc"></td>
+    </tr>
+    <tr data-bind="visible: managementDesc">
+        <td class="name">Management Description</td>
+        <td class="value" data-bind="text: managementDesc"></td>
+    </tr>
+    <tr data-bind="visible: opportunityDesc">
+        <td class="name">Description of Opportunity</td>
+        <td class="value" data-bind="text: opportunityDesc"></td>
+    </tr>
+</table>
+</div>
+
+<div class="col-md-6">
+<table class="info table table-responsive table-collapse table-without-lines table-first-row-align-left table-second-row-align-right table-first-row-is-title" data-bind="with: chosenTrxData">
+    <tr>
+        <th class="table-without-lines-header-row"colspan="2"><span class="orange_table_header">Compliance</span></th>
+    </tr>
+    <tr>
+        <td class="name">Engagement Letter</td>
+        <td class="value"><i data-bind="visible: !engagementletter">Not Yet Available</i><a data-bind="visible: engagementletter, attr: {href: engagementletter_url}, text: engagementletter"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Firm Documents</td>
+        <td class="value"><i data-bind="visible: !firmdocuments">Not Yet Available</i><a data-bind="visible: firmdocuments, attr: {href: firmdocuments_url}, text: firmdocuments"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Know Your Customer</td>
+        <td class="value"><i data-bind="visible: !knowyourcustomer">Not Yet Available</i><a data-bind="visible: knowyourcustomer, attr: {href: knowyourcustomer_url}, text: knowyourcustomer"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Transactions Docs</td>
+        <td class="value"><i data-bind="visible: !transactiondocs">Not Yet Available</i><a data-bind="visible: transactiondocs, attr: {href: transactiondocs_url}, text: transactiondocs"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Trade Confirm</td>
+        <td class="value"><i data-bind="visible: !tradeconfirm">Not Yet Available</i><a data-bind="visible: tradeconfirm, attr: {href: tradeconfirm_url}, text: tradeconfirm"></a></td>
+    </tr>
+    <tr class="inset-header-row">
+        <th class="table-without-lines-header-row" colspan="2"><span class="orange_table_header">Deal Docs</span></th>
+    </tr>
+    <tr>
+        <td class="name">Black Border</td>
+        <td class="value"><i data-bind="visible: !blackborder">Not Yet Available</i><a data-bind="visible: blackborder, attr: {href: blackborder_url}, text: blackborder"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Teaser</td>
+        <td class="value"><i data-bind="visible: !teaser">Not Yet Available</i><a data-bind="visible: teaser, attr: {href: teaser_url}, text: teaser"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Corp. Deck/mgmt presentation</td>
+        <td class="value"><i data-bind="visible: !corpdeck">Not Yet Available</i><a data-bind="visible: corpdeck, attr: {href: corpdeck_url}, text: corpdeck"></a></td>
+    </tr>
+    <tr>
+        <td class="name">PPM / OM</td>
+        <td class="value"><i data-bind="visible: !ppm">Not Yet Available</i><a data-bind="visible: ppm, attr: {href: ppm_url}, text: ppm"></a></td>
+    </tr>
+    <tr>
+        <td class="name" data-bind="text: otherTitle"></td>
+        <td class="value"><i data-bind="visible: !other">Not Yet Available</i><a data-bind="visible: other, attr: {href: other_url}, text: other"></a></td>
+    </tr>
+    <tr>
+        <td class="name">Data Room</td>
+        <td class="value"><i data-bind="visible: !dataroom">Not Yet Available</i><a data-bind="visible: dataroom, attr: {href: dataroom_url}, text: dataroom"></a></td>
+    </tr>
+</table>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-6">
+    <table class="info table table-responsive table-collapse mobile-centertext mobile-centertext-table table-without-lines table-first-row-align-left table-second-row-align-right table-first-row-is-title" data-bind="with: chosenTrxData">
+        <tr><th class="table-without-lines-header-row" colspan=8><span class="orange_table_header">Financials</span></th></tr>
+        <tr>
+            <td></td>
+            <td style="text-align: center;">TTM</td>
+            <td style="text-align: center;">PC</td>
+            <td style="text-align: center;">Y1</td>
+            <td style="text-align: center;">Y2</td>
+            <td style="text-align: center;">Y3</td>
+            <td style="text-align: center;">Y4</td>
+            <td style="text-align: center;">Y5</td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">Revenue</td>
+            <td data-bind="numericWithComas: revenueTTM"></td>
+            <td data-bind="numericWithComas: revenuePC"></td>
+            <td data-bind="numericWithComas: revenueY1"></td>
+            <td data-bind="numericWithComas: revenueY2"></td>
+            <td data-bind="numericWithComas: revenueY3"></td>
+            <td data-bind="numericWithComas: revenueY4"></td>
+            <td data-bind="numericWithComas: revenueY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">EbitdaMargin</td>
+            <td data-bind="numericWithComas: ebitdaMarginTTM"></td>
+            <td data-bind="numericWithComas: ebitdaMarginPC"></td>
+            <td data-bind="numericWithComas: ebitdaMarginY1"></td>
+            <td data-bind="numericWithComas: ebitdaMarginY2"></td>
+            <td data-bind="numericWithComas: ebitdaMarginY3"></td>
+            <td data-bind="numericWithComas: ebitdaMarginY4"></td>
+            <td data-bind="numericWithComas: ebitdaMarginY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">Ebitda</td>
+            <td data-bind="numericWithComas: ebitdaTTM"></td>
+            <td data-bind="numericWithComas: ebitdaPC"></td>
+            <td data-bind="numericWithComas: ebitdaY1"></td>
+            <td data-bind="numericWithComas: ebitdaY2"></td>
+            <td data-bind="numericWithComas: ebitdaY3"></td>
+            <td data-bind="numericWithComas: ebitdaY4"></td>
+            <td data-bind="numericWithComas: ebitdaY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">EbitdaMultiple</td>
+            <td data-bind="numericWithComas: ebitdaMultipleTTM"></td>
+            <td data-bind="numericWithComas: ebitdaMultiplePC"></td>
+            <td data-bind="numericWithComas: ebitdaMultipleY1"></td>
+            <td data-bind="numericWithComas: ebitdaMultipleY2"></td>
+            <td data-bind="numericWithComas: ebitdaMultipleY3"></td>
+            <td data-bind="numericWithComas: ebitdaMultipleY4"></td>
+            <td data-bind="numericWithComas: ebitdaMultipleY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">CacheOnBalance</td>
+            <td data-bind="numericWithComas: cacheOnBalanceTTM"></td>
+            <td data-bind="numericWithComas: cacheOnBalancePC"></td>
+            <td data-bind="numericWithComas: cacheOnBalanceY1"></td>
+            <td data-bind="numericWithComas: cacheOnBalanceY2"></td>
+            <td data-bind="numericWithComas: cacheOnBalanceY3"></td>
+            <td data-bind="numericWithComas: cacheOnBalanceY4"></td>
+            <td data-bind="numericWithComas: cacheOnBalanceY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">EnterpriseValue</td>
+            <td data-bind="numericWithComas: enterpriseValueTTM"></td>
+            <td data-bind="numericWithComas: enterpriseValuePC"></td>
+            <td data-bind="numericWithComas: enterpriseValueY1"></td>
+            <td data-bind="numericWithComas: enterpriseValueY2"></td>
+            <td data-bind="numericWithComas: enterpriseValueY3"></td>
+            <td data-bind="numericWithComas: enterpriseValueY4"></td>
+            <td data-bind="numericWithComas: enterpriseValueY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">Debt</td>
+            <td data-bind="numericWithComas: debtTTM"></td>
+            <td data-bind="numericWithComas: debtPC"></td>
+            <td data-bind="numericWithComas: debtY1"></td>
+            <td data-bind="numericWithComas: debtY2"></td>
+            <td data-bind="numericWithComas: debtY3"></td>
+            <td data-bind="numericWithComas: debtY4"></td>
+            <td data-bind="numericWithComas: debtY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">EquityValue</td>
+            <td data-bind="numericWithComas: equityValueTTM"></td>
+            <td data-bind="numericWithComas: equityValuePC"></td>
+            <td data-bind="numericWithComas: equityValueY1"></td>
+            <td data-bind="numericWithComas: equityValueY2"></td>
+            <td data-bind="numericWithComas: equityValueY3"></td>
+            <td data-bind="numericWithComas: equityValueY4"></td>
+            <td data-bind="numericWithComas: equityValueY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">CostOfDebtP</td>
+            <td data-bind="numericWithComas: costOfDebtPTTM"></td>
+            <td data-bind="numericWithComas: costOfDebtPPC"></td>
+            <td data-bind="numericWithComas: costOfDebtPY1"></td>
+            <td data-bind="numericWithComas: costOfDebtPY2"></td>
+            <td data-bind="numericWithComas: costOfDebtPY3"></td>
+            <td data-bind="numericWithComas: costOfDebtPY4"></td>
+            <td data-bind="numericWithComas: costOfDebtPY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">CostOfDebtD</td>
+            <td data-bind="numericWithComas: costOfDebtDTTM"></td>
+            <td data-bind="numericWithComas: costOfDebtDPC"></td>
+            <td data-bind="numericWithComas: costOfDebtDY1"></td>
+            <td data-bind="numericWithComas: costOfDebtDY2"></td>
+            <td data-bind="numericWithComas: costOfDebtDY3"></td>
+            <td data-bind="numericWithComas: costOfDebtDY4"></td>
+            <td data-bind="numericWithComas: costOfDebtDY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">DebtServiceCoverage</td>
+            <td data-bind="numericWithComas: debtServiceCoverageTTM"></td>
+            <td data-bind="numericWithComas: debtServiceCoveragePC"></td>
+            <td data-bind="numericWithComas: debtServiceCoverageY1"></td>
+            <td data-bind="numericWithComas: debtServiceCoverageY2"></td>
+            <td data-bind="numericWithComas: debtServiceCoverageY3"></td>
+            <td data-bind="numericWithComas: debtServiceCoverageY4"></td>
+            <td data-bind="numericWithComas: debtServiceCoverageY5"></td>
+        </tr>
+        <tr class="right">
+            <td style="text-align: left">TimesTroughEbitda</td>
+            <td data-bind="numericWithComas: timesTroughEbitdaTTM"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaPC"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaY1"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaY2"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaY3"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaY4"></td>
+            <td data-bind="numericWithComas: timesTroughEbitdaY5"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="col-md-6">
+    <table class="info table table-responsive table-collapse table-without-lines" width="100%" id="tableActions">
+        <tr><th class="table-without-lines-header-row"><span class="orange_table_header">Actions</span></th></tr>
+        <tr><td><a href="#" class="btn" id="trackDealBtn" class="trxDialogActionButton">Save To Deals I’m Tracking</a></td></tr>
+        <tr><td><a href="#" class="btn" id="printDealBtn" class="trxDialogActionButton">Print</a></td></tr>
+        <tr><td><a href="#" class="btn" id="dealWorkBtn" class="trxDialogActionButton">Work On This Deal</a></td></tr>
+        <tr><td><a href="#" class="btn" id="dealReviewNamesBtn" class="trxDialogActionButton">Review Restricted Names</a></td></tr>
+    </table>
+</div>
+
+</div>
+</div>
+
+<div id="dialogTrxWork" class="ui-helper-hidden" title="Restricted Names">
+    <div class="row" style="text-align: top; margin-bottom: 10px;">
+        <div style="font-size: 28px; color:gray;">Transaction Name</div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <table class="info table table-responsive table-collapse table-without-lines">
+                <tr>
+                    <th class="table-without-lines-header-row"><span class="orange_table_header">My Covered Names</span></th>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <span id="mynamescontainer">
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>John&nbsp;Locke</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Epicurus</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Zeno&nbsp;of&nbsp;Citium</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Avicenna</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Thomas&nbsp;Aquinas</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Confucius</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Rene&nbsp;Descartes</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Paul&nbsp;of&nbsp;Tarsus</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Plato</div>
+                            <div class="wrapped_name"><span class="redcross">&#10006;</span>Aristotle</div>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table class="info table table-responsive table-collapse table-without-lines">
+                <tr>
+                    <th class="table-without-lines-header-row"><span class="orange_table_header">Add the Name</span></th>
+                </tr>
+                <tr>
+                    <td>
+                        <form id="submitNameFrm" action="/acplivedeal/user/add-restricted-name.json" method="post">
+                            <input type="text" name="restrictedName" class="tipsy_manual" style="margin-bottom: 5px; width:100%;" />
+                            <br />
+                            <a class="btn" style="cursor: pointer;" onclick="$('#submitNameFrm').submit()">Submit Name</a>
+                            <br />
+                            * At least one name must be submitted to begin work on a transaction<br />
+                            <br />
+                            ** Multiple names may be entered seperated by a comma<br />
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9 pull-left">
+            <table class="info table table-responsive table-collapse table-without-lines">
+                <tr>
+                    <th class="table-without-lines-header-row" width="45%"><span class="orange_table_header">Firm&nbsp;Member</span></th>
+                    <th width="10%">&nbsp;</th>
+                    <th class="table-without-lines-header-row"><span class="orange_table_header">Covered&nbsp;Names</span></th>
+                </tr>
+                <tr>
+                    <td class="table-without-lines-underlined-row">
+                        <table class="table-first-row-align-left table-second-row-align-right table-first-row-is-title table-first-row-is-title-without-header table-without-lines-without-header">
+                            <tr>
+                                <td>Member&nbsp;Name:</td>
+                                <td>andrey5 Klaus5</td>
+                            </tr>
+                            <tr>
+                                <td>Office:</td>
+                                <td>New-york</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>deepmindster5@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Phone&nbsp;#:</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="table-without-lines-underlined-row">
+                        andrey,  fsdfds,  fsfds,  fsfsd, dddddd, fsdfsfs
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table-first-row-align-left table-second-row-align-right table-first-row-is-title  table-first-row-is-title-without-header table-without-lines-without-header ">
+                            <tr>
+                                <td>Member&nbsp;Name:</td>
+                                <td>andrey klaus</td>
+                            </tr>
+                            <tr>
+                                <td>Office:</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>deepmindster@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Phone&nbsp;#:</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <!--       Names         -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div> <!-- main Boostrap container -->
+</div>
+
+<footer class="footer greyBackground default-font">
+    <div class="container footer_main_container">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="col-md-5 footer-content-col">
+                <div class="row">
+                    CONTACT US
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    Phone: 7(904) 343-341-781
+                </div>
+                <div class="row">
+                    Email: some@email.com
+                </div>
+                <div class="row">
+                    Aldwych Capital Partners<br/>
+                    950 Third Avenue<br/>
+                    16th Floor<br/>
+                    New York, NY 10010<br/>
+                </div>
+                <div class="row">
+                    P: 212.319.2501
+                    F: 646.349.5941
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    &copy; 2013 ACPLiveDeal, Inc. All rights reserved.
+                </div>
+            </div>
+            <div class="col-md-2 footer-content-col">
+                <div class="row">
+                    HELP
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    FAQ
+                </div>
+                <div class="row">
+                    About
+                </div>
+                <div class="row">
+                    Terms Of Use
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    PRESS
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    Some Press Publications 1
+                </div>
+                <div class="row">
+                    Some Press Publications 1
+                </div>
+                <div class="row">
+                    Some Press Publications 1
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="row">
+                    SOCIAL LINKS
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    Twitter
+                </div>
+                <div class="row">
+                    Facebook
+                </div>
+                <div class="row">
+                    YouTube
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,449 @@
+.noscript { display: none; }
+
+ul.pages li{display:inline-block; width:20px; text-align: center; border: 1px solid #0b2643; color: #0b2643; margin-left: 2px;font-weight:bold;}
+ul.pages li:hover{background-color: #a4bfdb;cursor:pointer;color:white;}
+ul.pages li.selected{background-color: #a4bfdb;cursor:pointer;color:white;}
+.trxs th{padding-left: 1em; padding-right: 1em; text-align: center;}
+.trxs tbody tr:hover{background-color: #d7f3fe;cursor:pointer;}
+.trxs td{border: 1px solid #0b2643; padding: 5px; text-align: center; vertical-align: middle;}
+.trxs td:last-child{border-right: 1px solid #0b2643;}
+.right td{text-align:right;}
+.ui-widget-header{background: #0b2643; border: 1px solid #0b2643;}
+a.btn{display: block;padding: 13px 10px;border-radius: 3px;color: #fff;background: #0b2643;text-align: center;text-decoration: none;font-size: 16px;}
+a.btn:hover{background: #1d446d;}
+
+/*New CSS*/
+
+html,body
+{
+    height:100%;
+}
+
+
+/*Curved table for Bootstrap*/
+.table-curved {
+    border-collapse: separate;
+    border-radius: 6px;
+    border-left: 0px;
+    border-top: 0px;
+}
+.table-curved > :first-child > :first-child > :first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved > :first-child > :first-child > :last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved > :last-child > :last-child > :first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved > :last-child > :last-child > :last-child {
+    border-radius: 0 0 6px 0;
+}
+/**/
+
+/*Navbar centering for Bootstrap*/
+.nav.nav-center {
+    display: inline-block;
+    left: 0;
+    right: 0;
+    text-align:center;
+    width:70%;
+}
+.center.navbar .nav,
+.center.navbar .nav > li,
+.login_line {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+.center .navbar-inner {
+    text-align:center;
+}
+.center .dropdown-menu {
+    text-align: left;
+}
+/**/
+
+/*Default font*/
+.default-font {
+    font-family: Myriad;
+    font-size: 12px;
+    color: #656565;
+    text-align: left;
+}
+/**/
+
+.lightGreyBackground{
+    width: 100%;
+    background-color: #cccccc;
+}
+
+.search_selection_table {
+    margin: 0 auto 40px;
+}
+
+.search_selection_table tr,
+.search_selection_table td,
+.search_selection_table_col {
+    background-color: #f8f8f8; !important
+}
+
+
+.search_selection_table, .search_selection_table_header {
+    max-width:720px;
+}
+
+@media (max-width: 992px) {
+    .search_selection_table, .search_selection_table_header {
+        width:450px;
+    }
+}
+
+@media (max-width: 520px) {
+    .search_selection_table, .search_selection_table_header {
+        width:170px;
+    }
+}
+
+.search_selection_table_col {
+    width:167px;
+    margin: 0 auto 20px;
+}
+
+.bottom_line {
+    border-bottom: 2px #d9d9d9;
+    border-bottom-style: solid;
+}
+
+.brand_menu {
+    margin-bottom: 0px;
+    border-bottom: 2px #d9d9d9 solid;
+}
+
+.login_line {
+    display:inline-block;
+    height: 140px;
+    line-height: 140px;
+    vertical-align: middle;
+}
+
+@media (max-width: 465px) {
+    .login_line {
+        height: 70px;
+        line-height: 70px;
+    }
+}
+
+.main_menu_item, .main_menu_item:hover,
+.main_menu_item_last, .main_menu_item_last:hover {
+    margin-left: -4px;
+}
+
+.main_menu {
+ height: auto;
+}
+
+
+.main_menu_item{
+    color: #080808;
+    border-right: 1px #e5e5e5 solid;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.main_menu_item_last{
+    color: #080808;
+    border-right: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.main_menu_item:hover{
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.main_menu_item_last:hover{
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.orange_table_header {
+    color: #c85d28;
+    font-size: 1.3em;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+.orange_table_header_row {
+    text-align: left;
+    border-bottom: 2px dotted #c85d28;
+}
+
+
+@media (max-width: 375px) {
+    .orange_table_header_row {
+        text-align: center;
+    }
+}
+
+.orange_table_header {
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .orange_table_header_row {
+        border-bottom: none;
+    }
+}
+
+
+.transaction_grid_table_header {
+    vertical-align: bottom;
+}
+
+.transaction_grid_table
+{
+    width:100%;
+    margin-bottom: 10px;
+}
+
+/*https://github.com/alcaeus/bootstrap-table-responsive*/
+.transaction_grid_table,
+.transaction_grid_table td,
+.transaction_grid_table td:last-child
+{
+    border: none;
+}
+
+.transaction_grid_table tr
+{
+    border-bottom: #adadad 1px solid;
+}
+
+.transaction_grid_table thead tr
+{
+    color: #0b2643; font-size: 0.8em; height: 3em;
+}
+
+.upper_pages {
+    /*white-space:nowrap;*/
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.upper_pages_row {
+    text-align: right;
+}
+
+.bottom_pages {
+    text-align: right;
+}
+
+@media (max-width: 375px) {
+    .upper_pages_row {
+        text-align: center;
+    }
+}
+
+.transaction_table_main_row {
+    margin-bottom: 30px;
+}
+
+
+.live_deal_table {
+    width:100%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .live_deal_table {
+        text-align: center;
+    }
+}
+
+.live_deal_table,
+.live_deal_table td,
+.live_deal_table td:last-child
+{
+    border: none;
+}
+
+.live_deal_table tr
+{
+    border-bottom: #adadad 1px solid;
+}
+
+.live_deal_table thead tr
+{
+    color: #0b2643; font-size: 0.8em; height: 3em;
+}
+
+#wrap
+{
+    min-height: 100%;
+}
+
+#main
+{
+    overflow:auto;
+    padding-bottom:230px; /* this needs to be bigger than footer height*/
+}
+
+.footer
+{
+    position: relative;
+    margin-top: -230px; /* negative value of footer height */
+    height: 230px;
+    clear:both;
+    padding-top:20px;
+}
+
+@media (max-width: 991px) {
+    .mobile-centertext {
+        text-align: center !important;
+    }
+
+    .mobile-centertext-table,
+    .mobile-centertext-table tr,
+    .mobile-centertext-table td,
+    .mobile-centertext-table th,
+    .mobile-centertext-table thead {
+        text-align: center !important;
+    }
+}
+
+.trxDialogActionButton {
+    margin: 0 auto;
+    width: 200px;
+    height: 20px;
+}
+
+@media (min-width: 768px) {
+    .table-without-lines >tbody>tr>th,
+    .table-without-lines >tfoot>tr>th,
+    .table-without-lines >thead>tr>td,
+    .table-without-lines >tbody>tr>td,
+    .table-without-lines >tfoot>tr>td {
+        padding: 2px;
+        border-top: none;
+        vertical-align: middle;
+        padding-left: 7px;
+    }
+
+    .table-without-lines >tbody :first-child>th,
+    .table-without-lines >tbody >.inset-header-row th {
+        padding-left: 2px;
+    }
+
+    .table-without-lines >tbody :nth-child(2)>td {
+        padding-top: 10px;
+    }
+
+    .table-without-lines-without-header >tbody :nth-child(2)>td {
+        padding-top: 1px;
+    }
+
+    .table-without-lines-header-row {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table-without-lines-underlined-row {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table-first-row-is-title >tbody tr :nth-child(1) {
+        font-weight: bold;
+    }
+
+    .table-first-row-is-title >tbody tr :nth-child(2),
+    .table-first-row-is-title >tbody tr :nth-child(2) i {
+        font-weight: normal;
+    }
+
+
+    .table-first-row-is-title >tbody :first-child :first-child {
+        font-weight: normal;
+    }
+
+    .table-first-row-is-title-without-header >tbody :first-child :first-child {
+        font-weight: bold;
+    }
+
+    .table-first-row-align-left >tbody>tr :first-child {
+        text-align: left;
+    }
+
+    .table-first-row-align-left >tbody>tr :nth-child(2) {
+        text-align: right;
+    }
+
+    .inset-header-row {
+        margin-top: 10px;
+    }
+
+    .inset-header-row + tr :nth-child(1),
+    .inset-header-row + tr :nth-child(2){
+        padding-top: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .minimum-width-in-mobile-view,
+    .ui-dialog{
+        width: 320 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    #main
+    {
+        padding-bottom:500px; /* this needs to be bigger than footer height*/
+    }
+
+    .footer
+    {
+        margin-top: -500px; /* negative value of footer height */
+        height: 500px;
+    }
+    .footer-content-col {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #888888;
+    }
+}
+
+.footer_main_container {
+    margin:0 auto;
+}
+
+
+/*Two wrapper instead of one: hack for Firefox that draws outline between lines.*/
+/*http://stackoverflow.com/questions/13706091/css-javascript-how-to-draw-minimal-border-around-an-inline-element*/
+
+.wrapped_name {
+    -moz-border-radius:3px 3px 3px 3px;
+    border-radius:3px 3px 3px 3px;
+    border:solid 1px #000;
+    display:inline-block;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    cursor: pointer;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.redcross {
+    color: #cc0000;
+    margin-right: 2px;
+}
+
+#mynamescontainer div:hover {
+    background-color: #d7f3fe;
+}

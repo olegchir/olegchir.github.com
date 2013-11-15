@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Myriad; /* Гарнитура шрифта */
+    src: url(../MYRIADPRO-REGULAR.OTF); /* Путь к файлу со шрифтом */
+}
+
+DIV#newPhotoDialog.ui-helper-hidden.dialog.ui-dialog-content.ui-widget-content {
+  height: 250px;  
+}
+
+body{padding:0;margin:0;}
+body,td,font,p,input,select,textarea{font-family:Myriad;font-size:12px;color: #656565;}
+label{cursor:pointer;}
+
+.coverPageBgTop{
+    background-image:url('../images/coverPageBgTop.png');
+    background-repeat: repeat-x;
+    background-color: #f2f2f2;
+}    
+
+.orangeText{
+  color: #f7964b;  
+}
+
+.orangeUnderline{
+    border-bottom: solid 2px #f7964b;  
+    
+    font-size: 18px;
+}    
+
+.login{
+	width: 160px;
+	height: 30px;
+	border: solid 2px #dddddd;
+    line-height: 20px; 
+}
+
+.submitBtn{
+  background-color: #002e56; color: white; font-weight: bold;  
+  -moz-border-radius: 7px; border-radius: 7px;
+}    
+
+.submitBtn:hover{
+  background-color: #305e86;
+  cursor: pointer;
+}    
+
+.tdBorderBottom{
+     border-bottom: solid #e5e5e5 1px;
+}     
+
+input{
+	width: 200px;
+	height: 30px;
+	border: solid 2px #dddddd;
+    line-height: 20px; 
+    padding-left: 3px;
+}
+
+.line{
+    background-color: #d9d9d9;
+    height: 2px;
+    width: 100%;
+}
+
+.menu{
+  color: #080808;
+  border-right: 1px #e5e5e5 solid;
+   width: 80px;
+   height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}    
+
+.menuLast{
+  color: #080808;
+  border-right: none;
+   width: 130px;
+  font-size: 13px;
+  cursor: pointer;
+}
+ 
+ .menu:hover{
+  background-color: #efefef;
+  cursor: pointer;
+}    
+
+.menuLast:hover{
+  background-color: #efefef;
+  cursor: pointer;
+} 
+
+.toolbarHeader{
+  /*background-color: #ddd;*/
+  color: #0e2640;
+  width: 130px;
+  height: 33px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.toolb{
+    
+    background-color: #efefef;
+}    
+
+.greyBackground{
+  width: 100%;
+  background-color: #eaeaea;
+}    
+
+.greyBg{
+    background-color: #eaeaea;
+    height: 80px;
+    width: 100%;
+}    
+
+.clearDiv{
+  clear: both;
+}    
+
+.title{
+  font-weight: bold;
+  font-size: 18px;
+  color: #888;
+}    
+
+.styled-select select {
+    width: 200px;
+	height: 30px;
+	border: solid 2px #dddddd;
+    padding-top: 5px;
+    background-color: white;
+}
+
+.redAsterics{
+    color: red;
+}    
+
+#t1 td{
+  text-align: right;  
+}    
