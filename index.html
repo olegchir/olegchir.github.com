@@ -14,43 +14,9 @@
     <meta name="copyright" content="Oleg Chirukhin">
     
     <script src="https://raw.githubusercontent.com/inexorabletash/polyfill/master/polyfill.min.js"> </script>
-    
-    
-    <script>
-var Name, p;
-
-Function.prototype.property = function(prop, desc) {
-  return Object.defineProperty(this.prototype, prop, desc);
-};
-
-Name = (function() {
-  function Name(first, last) {
-    this.first = first;
-    this.last = last;
-  }
-
-  Name.property('name', {
-    get: function() {
-      return this.first + " " + this.last;
-    },
-    set: function(name) {
-      var ref;
-      ref = name.split(' '), this.first = ref[0], this.last = ref[1];
-      return alert(name);
-    }
-  });
-
-  return Name;
-
-})();
-
-p = new Name('Bob', 'Jones');
-
-p.name = 'Bob Smith';
- </script>
 </head>
 <body>
-<span style="font-size: 1.8em">Summary:</span><br/>
+<span id="summary" style="font-size: 1.8em">Summary:</span><br/>
 <br/>
 Greetings.<br/><br/>
 
